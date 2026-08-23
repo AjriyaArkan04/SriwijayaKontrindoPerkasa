@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@import "@fontsource/archivo/500.css";
+@import "@fontsource/archivo/600.css";
+@import "@fontsource/archivo/700.css";
+@import "@fontsource/archivo/800.css";
+@import "@fontsource/archivo/900.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/fraunces/400-italic.css";
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600.css";
+
+:root {
+  /* --- SKP brand tokens, derived from the 2025 Company Profile cover:
+     deep institutional navy, a brick/maroon accent, and a cool paper
+     background. No gradients anywhere in this system. --- */
+  --skp-navy: #0e1f45;
+  --skp-navy-deep: #081026;
+  --skp-navy-soft: #1c3164;
+  --skp-maroon: #7a1f2b;
+  --skp-maroon-deep: #591620;
+  --skp-brick: #b6432f;
+  --skp-paper: #f3f4f6;
+  --skp-paper-dim: #e9eaee;
+  --skp-ink: #12141c;
+  --skp-steel: #5b6270;
+  --skp-steel-light: #8a90a0;
+  --skp-line: #d6d9e0;
+  --skp-line-dark: #2a3560;
+  --skp-white: #ffffff;
+
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@theme inline {
+  --color-navy: var(--skp-navy);
+  --color-navy-deep: var(--skp-navy-deep);
+  --color-navy-soft: var(--skp-navy-soft);
+  --color-maroon: var(--skp-maroon);
+  --color-maroon-deep: var(--skp-maroon-deep);
+  --color-brick: var(--skp-brick);
+  --color-paper: var(--skp-paper);
+  --color-paper-dim: var(--skp-paper-dim);
+  --color-ink: var(--skp-ink);
+  --color-steel: var(--skp-steel);
+  --color-steel-light: var(--skp-steel-light);
+  --color-line: var(--skp-line);
+  --color-line-dark: var(--skp-line-dark);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--skp-paper);
+  color: var(--skp-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--skp-navy);
+  color: var(--skp-white);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--skp-brick);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility: hairline blueprint-style corner registration marks, used as the
+   site's recurring signature motif on hero art and feature imagery. */
+.corner-marks {
+  position: relative;
+}
+.corner-marks::before,
+.corner-marks::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+.corner-marks::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+}
+.corner-marks::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+
+.container-skp {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-skp {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-skp {
+    padding-inline: 4rem;
+  }
+}
+
+.blueprint-grid {
+  background-image: linear-gradient(var(--skp-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--skp-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
