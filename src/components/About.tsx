@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import Image from "next/image";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
 import { company } from "@/data/company";
@@ -50,16 +50,14 @@ export function About() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-5">
-            <Reveal delay={0.15} className="corner-marks h-full text-navy/60">
-              <ImagePlaceholder
+          <div className="relative h-full" style={{ aspectRatio: "3/4" }}>
+              <Image
                 src="/images/about/skp-team-field.webp"
                 alt="Tim SKP di lokasi proyek"
-                aspect="4/5"
-                label="ABOUT IMAGE"
+                fill
+                priority
                 className="h-full"
               />
-            </Reveal>
           </div>
         </div>
       </div>

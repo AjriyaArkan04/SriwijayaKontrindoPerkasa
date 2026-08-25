@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { ImagePlaceholder } from "./ImagePlaceholder";
+import Image from "next/image";
 import { Reveal } from "./Reveal";
 import { SectionLabel } from "./SectionLabel";
 import { ProjectModal } from "./ProjectModal";
@@ -64,11 +64,11 @@ export function ProjectsExplorer() {
                   className="group grid w-full grid-cols-1 items-stretch overflow-hidden border border-line bg-white text-left transition-shadow hover:shadow-[0_8px_30px_rgba(14,31,69,0.08)] md:grid-cols-12"
                 >
                   <div className="relative md:col-span-5 lg:col-span-4">
-                    <div className="corner-marks h-full text-navy/50">
-                      <ImagePlaceholder
+                    <div className="corner-marks aspect-[4/3] text-navy/50">
+                      <Image
                         src={client.heroImage}
                         alt={`Proyek ${client.client}`}
-                        aspect="4/3"
+                        fill
                         className="h-full transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                     </div>
@@ -107,15 +107,15 @@ export function ProjectsExplorer() {
             ))}
           </div>
         ) : (
-          <div className="mt-12 grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-1 border border-line bg-white sm:grid-cols-2 lg:grid-cols-3">
             {factoryProjects.map((project, i) => (
               <Reveal key={project.slug} delay={0.05 * i} className="h-full">
                 <article className="group flex h-full flex-col bg-white">
-                  <div className="corner-marks text-navy/40">
-                    <ImagePlaceholder
+                  <div className="corner-marks aspect-[4/3] text-navy/40">
+                    <Image
                       src={project.image}
                       alt={`Proyek di ${project.company}`}
-                      aspect="4/3"
+                      fill
                       className="transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </div>
