@@ -91,7 +91,7 @@ export function ProjectsExplorer() {
                     <div className="flex items-center gap-8">
                       <div>
                         <div className="font-display text-4xl font-800 tabular-nums text-navy">
-                          -+{client.approxCount}
+                          {client.approxCount}
                         </div>
                         <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-steel-light">
                           Proyek Selesai
@@ -148,13 +148,13 @@ export function ProjectsExplorer() {
 
         <div className="mt-16 grid grid-cols-1 gap-px border border-line-dark bg-line-dark sm:grid-cols-3">
           <div className="bg-navy p-8 text-center">
-            <CountStat value={28} prefix="-+" label="Proyek Astra Otoparts" />
+            <CountStat value={28} prefix="" label="Proyek Astra Otoparts" />
           </div>
           <div className="bg-navy p-8 text-center">
-            <CountStat value={18} prefix="-+" label="Toko FamilyMart" />
+            <CountStat value={18} prefix="" label="Toko FamilyMart" />
           </div>
           <div className="bg-navy p-8 text-center">
-            <CountStat value={12} prefix="-+" label="Toko Lawson Station" />
+            <CountStat value={12} prefix="" label="Toko Lawson Station" />
           </div>
         </div>
       </div>
