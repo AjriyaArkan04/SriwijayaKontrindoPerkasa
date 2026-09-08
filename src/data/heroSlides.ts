@@ -3,24 +3,66 @@
 // the overall image plan, and the note at the bottom of Hero.tsx for how
 // to swap a placeholder slide for a real photo.
 //
-// Recommended: 1920 x 1280 px (landscape, rasio 3:2 kebawah masih aman),
-// format .webp, ukuran file idealnya di bawah ~300KB per foto supaya
-// slideshow tetap ringan meski ada 10 foto yang di-load.
+// SIZING:
+// - Landscape photos (fit: "cover", the default): recommended 1920 x 1080
+//   px (16:9) or wider. These fill the entire screen edge-to-edge — the
+//   photo gets cropped to whatever the viewport's aspect ratio is.
+// - Portrait/vertical photos (fit: "contain"): the full photo is shown
+//   without cropping. Empty space on the left and right follows the
+//   section's background color.
+//
+// Format: .webp direkomendasikan (ukuran file lebih kecil), tapi .jpg
+// juga tetap jalan normal kalau itu yang kamu punya.
 
 export type HeroSlide = {
   src: string;
   alt: string;
+  /** "cover" (default) fills the screen and crops to fit.
+   *  "contain" shows the full photo uncropped.
+   */
+  fit?: "cover" | "contain";
 };
 
 export const heroSlides: HeroSlide[] = [
-  { src: "/images/hero/slide-01.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 1" },
-  { src: "/images/hero/slide-02.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 2" },
-  { src: "/images/hero/slide-03.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 3" },
-  { src: "/images/hero/slide-04.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 4" },
-  { src: "/images/hero/slide-05.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 5" },
-  { src: "/images/hero/slide-06.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 6" },
-  { src: "/images/hero/slide-07.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 7" },
-  { src: "/images/hero/slide-08.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 8" },
-  { src: "/images/hero/slide-09.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 9" },
-  { src: "/images/hero/slide-10.webp", alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 10" },
+  {
+    src: "/images/hero/slide-01.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 1",
+  },
+  {
+    src: "/images/hero/slide-02.jpg",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 2",
+    fit: "contain",
+  },
+  {
+    src: "/images/hero/slide-03.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 3",
+  },
+  {
+    src: "/images/hero/slide-04.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 4",
+  },
+  {
+    src: "/images/hero/slide-05.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 5",
+  },
+  {
+    src: "/images/hero/slide-06.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 6",
+  },
+  {
+    src: "/images/hero/slide-07.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 7",
+  },
+  {
+    src: "/images/hero/slide-08.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 8",
+  },
+  {
+    src: "/images/hero/slide-09.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 9",
+  },
+  {
+    src: "/images/hero/slide-10.webp",
+    alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 10",
+  },
 ];
