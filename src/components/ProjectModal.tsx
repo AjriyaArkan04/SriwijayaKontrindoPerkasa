@@ -3,7 +3,6 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MapPin } from "lucide-react";
-import { ImagePlaceholder } from "./ImagePlaceholder";
 import type { RetailClient } from "@/data/projects";
 
 type ProjectModalProps = {
@@ -49,20 +48,12 @@ export function ProjectModal({ client, onClose }: ProjectModalProps) {
               type="button"
               onClick={onClose}
               aria-label="Tutup"
-              className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center border border-white/30 bg-navy/70 text-white backdrop-blur-sm"
+              className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center border border-line bg-white text-navy transition-colors hover:border-brick hover:text-brick"
             >
               <X size={18} />
             </button>
 
-            <ImagePlaceholder
-              src={client.heroImage}
-              alt={`Foto proyek ${client.client}`}
-              aspect="16/9"
-              label="PROJECT IMAGE"
-              dark
-            />
-
-            <div className="p-6 md:p-8">
+            <div className="p-6 pt-14 md:p-8 md:pt-14">
               <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-brick">
                 <MapPin size={13} />
                 {client.regionNote}

@@ -8,7 +8,7 @@ const items = [
     icon: MapPin,
     label: "Alamat",
     value: company.address,
-    href: `https://www.google.com/maps/search/${encodeURIComponent(company.address)}`,
+    href: "https://maps.app.goo.gl/nAnw1hFmcuYKwmKm9",
   },
   { icon: Phone, label: "Telepon", value: company.phone, href: `tel:${company.phoneHref}` },
   { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },

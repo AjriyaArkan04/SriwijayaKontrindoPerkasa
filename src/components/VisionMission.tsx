@@ -13,7 +13,7 @@ export function VisionMission() {
         <div className="mt-10 grid grid-cols-1 gap-14 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <Reveal>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-brick">Visi</span>
+              <span className="font-mono text-base uppercase tracking-[0.2em] text-brick">Visi</span>
               <p className="mt-5 font-serif text-2xl italic font-400 leading-snug text-white/95 md:text-[2rem]">
                 &ldquo;{company.vision}&rdquo;
               </p>
@@ -21,7 +21,7 @@ export function VisionMission() {
           </div>
 
           <div className="lg:col-span-6">
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-brick">Misi</span>
+            <span className="font-mono text-base uppercase tracking-[0.2em] text-brick">Misi</span>
             <ol className="mt-5 space-y-6">
               {company.mission.map((m, i) => (
                 <Reveal key={i} delay={0.1 * (i + 1)}>

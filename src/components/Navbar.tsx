@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/nav";
 import { company } from "@/data/company";
 import { cx } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +35,13 @@ export function Navbar() {
     >
       <div className="container-skp flex h-16 items-center justify-between md:h-20">
         <a href="#home" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center border border-white/25 font-display text-sm font-800 text-white">
-            SKP
-          </span>
+          <Image
+            src="/images/logo/skp-logo.png"
+            alt="Logo PT Sriwijaya Kontrindo Perkasa"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
+          />
           <span className="hidden font-display text-[13px] font-700 uppercase leading-tight tracking-[0.02em] text-white sm:block">
             Sriwijaya Kontrindo
             <br />

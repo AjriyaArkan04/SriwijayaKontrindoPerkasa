@@ -25,7 +25,7 @@ export function SectionLabel({ index, title, dark = false, className }: SectionL
       <span className={cx("h-px w-8", dark ? "bg-white/25" : "bg-line-dark/30")} />
       <span
         className={cx(
-          "font-mono text-xs tracking-[0.2em] uppercase",
+          "font-mono text-sm tracking-[0.2em] uppercase",
           dark ? "text-white/60" : "text-steel"
         )}
       >

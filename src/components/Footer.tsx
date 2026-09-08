@@ -1,6 +1,6 @@
 import { navLinks } from "@/data/nav";
 import { company } from "@/data/company";
-
+import Image from "next/image";
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -10,9 +10,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center border border-white/25 font-display text-sm font-800">
-                SKP
-              </span>
+              <Image
+                src="/images/logo/skp-logo.png"
+                alt="Logo PT Sriwijaya Kontrindo Perkasa"
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain"
+              />
               <span className="font-display text-[13px] font-700 uppercase leading-tight tracking-[0.02em]">
                 PT Sriwijaya Kontrindo
                 <br />
