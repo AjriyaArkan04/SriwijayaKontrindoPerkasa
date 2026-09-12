@@ -1,6 +1,7 @@
 import { navLinks } from "@/data/nav";
 import { company } from "@/data/company";
 import Image from "next/image";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -54,7 +55,26 @@ export function Footer() {
               <li>{company.address}</li>
               <li>{company.phone}</li>
               <li>{company.email}</li>
-              <li>{company.website}</li>
+              <li>
+                <a
+                  href={company.instagramHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  Instagram @pt.skpinfo_
+                </a>
+              </li>
+              <li>
+                <a
+                  href={company.tiktokHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  Tiktok @pt.skp_
+                </a>
+              </li>
             </ul>
           </div>
         </div>

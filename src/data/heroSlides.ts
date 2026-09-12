@@ -25,7 +25,7 @@ export type HeroSlide = {
 
 export const heroSlides: HeroSlide[] = [
   {
-    src: "/images/hero/slide-01.webp",
+    src: "/images/hero/slide-01.png",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 1",
   },
   {
@@ -34,35 +34,35 @@ export const heroSlides: HeroSlide[] = [
     fit: "contain",
   },
   {
-    src: "/images/hero/slide-03.webp",
+    src: "/images/hero/slide-03.jpeg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 3",
   },
   {
-    src: "/images/hero/slide-04.webp",
+    src: "/images/hero/slide-04.jpeg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 4",
   },
   {
-    src: "/images/hero/slide-05.webp",
+    src: "/images/hero/slide-05.jpeg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 5",
   },
   {
-    src: "/images/hero/slide-06.webp",
+    src: "/images/hero/slide-06.jpeg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 6",
   },
   {
-    src: "/images/hero/slide-07.webp",
+    src: "/images/hero/slide-07.jpg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 7",
   },
   {
-    src: "/images/hero/slide-08.webp",
+    src: "/images/hero/slide-08.png",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 8",
   },
   {
-    src: "/images/hero/slide-09.webp",
+    src: "/images/hero/slide-09.jpg",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 9",
   },
   {
-    src: "/images/hero/slide-10.webp",
+    src: "/images/hero/slide-10.png",
     alt: "Proyek konstruksi PT Sriwijaya Kontrindo Perkasa — foto 10",
   },
 ];

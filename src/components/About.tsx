@@ -52,7 +52,7 @@ export function About() {
 
           <div className="relative h-full" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/images/about/skp-team-field.png"
+                src="/images/about/skp-team-field.jpeg"
                 alt="Tim SKP di lokasi proyek"
                 fill
                 priority

@@ -123,13 +123,18 @@ export function Hero() {
       {/* Single flat scrim over the entire photo */}
       <div className="absolute inset-0 bg-navy-deep/55" />
 
-      {/* Previous arrow */}
+      {/* Previous arrow — sits near the top on mobile (where the photo is
+          still empty, before the text block starts) since the stacked
+          mobile layout pushes text/CTAs/stats tall enough that a true
+          vertical center would land on top of that content instead of on
+          open photo. From md upward, content no longer stacks as tall
+          relative to the viewport, so centering works fine again. */}
       <button
         type="button"
         onClick={goPrev}
         aria-label="Foto sebelumnya"
         className={cx(
-          "group absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-white/30 bg-navy-deep/60 text-white backdrop-blur-sm transition-opacity duration-300 md:left-8",
+          "group absolute left-3 top-20 z-20 flex h-11 w-11 items-center justify-center border border-white/30 bg-navy-deep/60 text-white backdrop-blur-sm transition-opacity duration-300 md:left-8 md:top-1/2 md:-translate-y-1/2",
           arrowVisible("left") ? "opacity-100" : "opacity-0",
           "focus-visible:opacity-100"
         )}
@@ -140,13 +145,13 @@ export function Hero() {
         />
       </button>
 
-      {/* Next arrow */}
+      {/* Next arrow — same reasoning as the previous-arrow comment above. */}
       <button
         type="button"
         onClick={goNext}
         aria-label="Foto berikutnya"
         className={cx(
-          "group absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-white/30 bg-navy-deep/60 text-white backdrop-blur-sm transition-opacity duration-300 md:right-8",
+          "group absolute right-3 top-20 z-20 flex h-11 w-11 items-center justify-center border border-white/30 bg-navy-deep/60 text-white backdrop-blur-sm transition-opacity duration-300 md:right-8 md:top-1/2 md:-translate-y-1/2",
           arrowVisible("right") ? "opacity-100" : "opacity-0",
           "focus-visible:opacity-100"
         )}

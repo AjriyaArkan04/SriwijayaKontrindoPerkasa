@@ -12,6 +12,10 @@ export const company = {
   phone: "+62 812-1361-2974",
   phoneHref: "+6281213612974",
   whatsappHref: "https://wa.me/6281213612974",
+  instagramHref: "https://www.instagram.com/p/DaCtX83xmne/?stkn=NTVpZmQzMW92Njhu",
+  tiktokHref: "https://vt.tiktok.com/ZSqaxSaEF/",
+  instagramHandle: "@pt.skpinfo_",
+  tiktokHandle: "PT SRIWIJAYA KONTRINDO PERKASA",
   address: "Perumahan Karaba Indah Blok KK No. 01, Karawang, Jawa Barat",
 
   businessAreas: [
@@ -87,9 +91,25 @@ export const company = {
     eyebrow: "Kantor Kami",
     title: "Our Office",
     rooms: [
-      { name: "Ruang Kantor Staff", image: "/images/office/staff-room.webp" },
-      { name: "Ruang Meeting Internal", image: "/images/office/meeting-room.webp" },
-      { name: "Lobby Kantor", image: "/images/office/lobby.webp" },
+      { name: "Ruang Kantor Staff", image: "/images/office/staff-room.png" },
+      { name: "Ruang Meeting Internal", image: "/images/office/meeting-room.png" },
+      { name: "Lobby Kantor", image: "/images/office/lobby.png" },
+    ],
+  },
+
+  certification: {
+    eyebrow: "Sertifikasi",
+    title: "Bersertifikat ISO 9001:2015",
+    narrative:
+      "Sistem manajemen mutu PT Sriwijaya Kontrindo Perkasa telah dinilai dan dinyatakan sesuai dengan standar internasional ISO 9001:2015, mencakup lingkup jasa pembangunan dan renovasi konstruksi (Provision of Building Construction and Renovation Works). Sertifikasi ini diterbitkan oleh EQAIMS sebagai bentuk pengakuan atas konsistensi mutu kerja SKP di setiap proyek.",
+    image: "/images/certification/iso-9001-2015.jpg",
+    facts: [
+      { label: "Standar", value: "ISO 9001:2015" },
+      { label: "Cakupan Sertifikasi", value: "Provision of Building Construction and Renovation Works" },
+      { label: "Nomor Sertifikat", value: "JQS-26-0730" },
+      { label: "Tanggal Terbit", value: "3 September 2026" },
+      { label: "Masa Berlaku", value: "3 September 2026 – 2 September 2029" },
+      { label: "Diterbitkan Oleh", value: "EQA IMS" },
     ],
   },
 } as const;

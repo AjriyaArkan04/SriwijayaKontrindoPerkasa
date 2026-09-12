@@ -7,7 +7,7 @@ export function VisionMission() {
     <section className="bg-navy py-20 text-white md:py-28">
       <div className="container-skp">
         <Reveal>
-          <SectionLabel index="02" title="Visi & Misi" dark />
+          <SectionLabel index="03" title="Visi & Misi" dark />
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-14 lg:grid-cols-12">

@@ -7,7 +7,7 @@ export function KeyFactors() {
     <section className="bg-paper py-20 md:py-28">
       <div className="container-skp">
         <Reveal>
-          <SectionLabel index="03" title="Key Factors" />
+          <SectionLabel index="04" title="Key Factors" />
         </Reveal>
 
         <Reveal delay={0.06}>
