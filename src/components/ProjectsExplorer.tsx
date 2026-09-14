@@ -64,7 +64,7 @@ export function ProjectsExplorer() {
                       {client.client}
                     </h3>
                     <p className="mt-2 max-w-md font-body text-[13px] leading-relaxed text-steel">
-                      {client.projects.length} lokasi proyek terdaftar &mdash; lihat detail lengkap.
+                      {client.projects.length} proyek di berbagai lokasi. Temukan detail lengkapnya.
                     </p>
                   </div>
 
